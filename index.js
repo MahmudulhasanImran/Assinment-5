@@ -23,4 +23,13 @@ parentDiv.addEventListener('click', function (e) {
         heartCountDisplay.innerText = Number(heartCountDisplay.innerText) + 1;
         target.classList.toggle('text-red-500');
     }
+
+    // coppy btn---
+    if (target.closest('.copyBtn')) {
+        navigator.clipboard.writeText(number).then(() => {
+            alert(`Copied: ${number}`);
+            const copyCountDisplay = getElement('copy-count');
+            copyCountDisplay.innerText = Number(copyCountDisplay.innerText) + 1;
+        });
+    }
 })
