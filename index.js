@@ -61,3 +61,8 @@ parentDiv.addEventListener('click', function (e) {
         }
     }
 })
+
+// Clear History 
+getElement('clear-btn').addEventListener('click', function () {
+    getElement('history-card').innerHTML = "";
+});
